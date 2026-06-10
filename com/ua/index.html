@@ -220,9 +220,9 @@
         </h1>
         <h2 class="main-block__sub-title">ОБИРАЙ СВОЮ РОЛЬ!</h2>
         <p class="main-block__text">
-            На цьому сервері починається нова історія проєкту.
-Тут кожен гравець має рівні можливості для старту з нуля, розвитку та досягнення власних цілей.
-Відновлення першого сервера повертає легендарну атмосферу витоків, де все тільки починалось і кожен міг стати частиною великої історії.
+            Більшість наших серверів переповнені досвідченими гравцями, тому придбати вільний бізнес чи будинок
+            новачкові майже неможливо.
+            Відкриття 7-ого сервера вирішує цю проблему, надаючи кожному рівні шанси на старт з нуля.
         </p>
 
         <ul class="main-block__roles roles">
@@ -268,21 +268,35 @@
             </li>
         </ul>
 
-<div class="main-block__active-players">
-    <div class="stats">
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="5.5" cy="5.5" r="5.5" fill="#7DC452" fill-opacity="0.3"></circle>
-            <circle cx="5.5" cy="5.5" r="2.5" fill="#7DC452"></circle>
-        </svg>
-        <span id="online-count">0</span>
-    </div>
-    <span class="label">АКТИВНИХ ГРАВЦІВ</span>
-</div>
-<div class="main-block__open center-download">
-    <a href="launcher.zip" download class="download-btn">
-        ЗАВАНТАЖИТИ ЛАУНЧЕР
-    </a>
-</div>
+        <div class="main-block__active-players">
+            <div class="stats">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5.5" cy="5.5" r="5.5" fill="#7DC452" fill-opacity="0.3"></circle>
+                    <circle cx="5.5" cy="5.5" r="2.5" fill="#7DC452"></circle>
+                </svg>
+                <span>3344+</span>
+            </div>
+            <span class="label">АКТИВНИХ ГРАВЦІВ</span>
+        </div>
+
+        <div class="main-block__open">
+            <div class="timer active" style="opacity: 1;">
+                <span class="label" style="text-align: center;">СЕРВЕР ВІДКРИТО</span>
+                <div class="timer-value" style="display: none;" id="timer-value" time="2026-04-18 15:00:00">
+                    <div id="timer-days">99</div>
+                    <div id="timer-hours">99</div>
+                    <div id="timer-minutes">99</div>
+                </div>
+            </div>
+            <a href="https://youtu.be/LqIzS7UVyAU?si=nfOFIdG0XwdzjG8Y" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5.5" cy="5.5" r="5.5" fill="#FB3235" fill-opacity="0.3"></circle>
+                    <circle cx="5.5" cy="5.5" r="2.5" fill="#FB3235"></circle>
+                </svg>
+                <span>ДИВИТИСЬ ТРЕЙЛЕР</span>
+            </a>
+        </div>
+
     <section class="reason">
         <div class="reason__wrapper">
             <h3 class="reason__title">ПРИЧИНИ <span>ПРИЄДНАТИСЬ</span> НА <span>НОВИЙ СЕРВЕР</span></h3>
@@ -414,7 +428,7 @@
                             <span>Коли саме відбудеться відкриття та чи буде затримка?</span>
                         </div>
                         <div class="q-answer">
-                            Відкриття 01 сервера заплановане на 13 травня. Щоб не пропустити точний час та дізнатися
+                            Відкриття 07 сервера заплановане на квітень. Щоб не пропустити точний час та дізнатися
                             актуальні новини, слідкуйте за таймером на нашому офіційному сайті.
 
                         </div>
@@ -431,7 +445,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <span>Як перенести майно з стаої версії гри?</span>
+                            <span>Як перенести майно на 07 сервер?</span>
                         </div>
                         <div class="q-answer">
                             На жаль, перенесення майна з інших ігрових серверів неможливе. Ви починаєте свій розвиток з
@@ -470,10 +484,10 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <span>Як зайти на ELITA RP?</span>
+                            <span>Як зайти на 07 сервер?</span>
                         </div>
                         <div class="q-answer">
-                            01 сервер буде відчинено 18 квітня з 15:00. Новачкам варто ознайомитися з інструкцією нижче,
+                            07 сервер буде відчинено 18 квітня з 15:00. Новачкам варто ознайомитися з інструкцією нижче,
                             а досвідченим гравцям очікувати коли сервер стане доступним до підключення в лаунчері.
 
                         </div>
@@ -929,37 +943,5 @@
 </script>
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    const targetDate = new Date("2026-06-13T15:00:00").getTime();
-
-    function updateTimer() {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
-
-        if (diff <= 0) {
-            document.getElementById("timer-days").innerText = "00";
-            document.getElementById("timer-hours").innerText = "00";
-            document.getElementById("timer-minutes").innerText = "00";
-            return;
-        }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-        document.getElementById("timer-days").innerText = String(days).padStart(2, "0");
-        document.getElementById("timer-hours").innerText = String(hours).padStart(2, "0");
-        document.getElementById("timer-minutes").innerText = String(minutes).padStart(2, "0");
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 60000);
-
-    // онлайн завжди 0
-    document.getElementById("online-count").innerText = "0";
-
-});
-</script>
 </body></html>
